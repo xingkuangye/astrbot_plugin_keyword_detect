@@ -32,17 +32,19 @@ class MyPlugin(Star):
                 if keyword == message_str:
 
                     logger.info(f"检测到关键字 '{keyword}'，开始转发消息")
-                    group_id = get_value(raw_message, "group_id")
+                    group_id = str(get_value(raw_message, "group_id"))
                     group_name = str(group_id)
                     # 获取群名称
                     try:
                         logger.debug(f"开始获取群名称，群号: {group_id}")
-                        group_info = await client.api.call_action('get_group_info', int(group_id))
+                        group_id = int(group_id)
+                        logger.debug(f"群号转换为整数成功: {group_id}")
+                        group_info = await client.api.call_action('get_group_info', group_id)
                         logger.debug(f"获取群信息成功: {group_info}")
                         group_name = group_info.get('group_name', group_name)
                         logger.debug(f"获取群名称成功: {group_name}")
-                    except:
-                        logger.error(f"获取群名称失败，使用群号作为名称")
+                    except Exception as e:
+                        logger.error(f"获取群名称失败，使用群号作为名称{e}")
                         pass
 
                     # 组装消息内容
