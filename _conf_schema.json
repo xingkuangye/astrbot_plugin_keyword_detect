@@ -1,10 +1,14 @@
 {
   "target_groups": {
-    "description": "Target group ID to forward messages to",
+    "description": "Target group IDs to forward messages to",
     "type": "list"
   },
   "keywords": {
     "description": "Keywords to detect (comma-separated)",
+    "type": "list"
+  },
+  "fuzzy_keywords": {
+    "description": "Fuzzy keywords to detect (comma-separated)",
     "type": "list"
   }
 }
