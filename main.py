@@ -53,4 +53,4 @@ class MyPlugin(Star):
 
                 break  # 只需检测到一个关键字即可
 
-        return MessageEventResult.IGNORE  # 继续传递事件
+        return
