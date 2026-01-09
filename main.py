@@ -34,6 +34,7 @@ class MyPlugin(Star):
                     logger.info(f"检测到关键字 '{keyword}'，开始转发消息")
                     group_id = str(get_value(raw_message, "group_id"))
                     group_name = str(group_id)
+                    client = event.bot
                     # 获取群名称
                     try:
                         logger.debug(f"开始获取群名称，群号: {group_id}")
@@ -51,7 +52,7 @@ class MyPlugin(Star):
                     forward_message = f"检测到关键字 \n{keyword} \n来自群 {group_name} "
 
                     # 转发消息
-                    client = event.bot
+                    
                     logger.debug(f"开始将消息转发至目标群聊{self.targets_groups}")
                     for target_group in self.targets_groups:
                         try:
