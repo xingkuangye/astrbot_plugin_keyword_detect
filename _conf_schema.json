@@ -1,4 +1,8 @@
 {
+  "detect_groups": {
+    "description": "Group IDs to monitor for keyword detection",
+    "type": "list"
+  },
   "target_groups": {
     "description": "Target group IDs to forward messages to",
     "type": "list"
