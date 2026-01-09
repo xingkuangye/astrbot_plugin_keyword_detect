@@ -38,7 +38,9 @@ class MyPlugin(Star):
                     try:
                         group_info = await client.api.call_action('get_group_info', int(group_id))
                         group_name = group_info.get('group_name', group_name)
+                        logger.debug(f"获取群名称成功: {group_name}")
                     except:
+                        logger.error(f"获取群名称失败，使用群号作为名称")
                         pass
 
                     # 组装消息内容
@@ -46,9 +48,10 @@ class MyPlugin(Star):
 
                     # 转发消息
                     client = event.bot
+                    logger.debug(f"开始将消息转发至目标群聊{self.targets_groups}")
                     for target_group in self.targets_groups:
                         try:
-
+                            logger.debug(f"正在将消息转发至群 {target_group}")
                             await client.api.call_action(
                                 'send_group_msg',
                                 group_id=int(target_group),
