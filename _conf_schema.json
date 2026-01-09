@@ -1,10 +1,10 @@
 {
   "target_group": {
     "description": "Target group ID to forward messages to",
-    "type": "list",
+    "type": "list"
   },
-    "keywords": {
-        "description": "Keywords to detect (comma-separated)",
-        "type": "list",
-    },
+  "keywords": {
+    "description": "Keywords to detect (comma-separated)",
+    "type": "list"
+  }
 }

@@ -1,8 +1,23 @@
-# helloworld
+# 关键字检测
 
-AstrBot 插件模板
+## 功能描述
 
-A template plugin for AstrBot plugin feature
+本插件是 AstrBot 的关键词检测插件模板。
+
+### 主要功能
+- 提供关键词检测的基础框架
+- 支持自定义关键词规则配置
+- 集成于 AstrBot 插件生态系统
+
+### 适用场景
+- 消息内容关键词识别
+- 事件触发条件判断
+- 内容过滤和分类
+
+### 使用要求
+- 基于 AstrBot 插件标准开发
+- 遵循插件规范进行扩展开发
+
 
 # 支持
 
