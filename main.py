@@ -1,7 +1,15 @@
 from astrbot.api import logger
 from astrbot.api.star import Context, Star, register
-from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
+from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.core.star.filter.platform_adapter_type import PlatformAdapterType
+
+def get_value(obj, key, default=None):
+    try:
+        if isinstance(obj, dict):
+            return obj.get(key, default)
+        return getattr(obj, key, default)
+    except Exception:
+        return default
 
 @register("keyword_detect", "星星旁の旷野", "识别指定关键字并将消息转发至指定群聊", "0.5.0")
 class MyPlugin(Star):
