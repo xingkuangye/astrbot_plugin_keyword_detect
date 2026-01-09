@@ -44,7 +44,7 @@ class MyPlugin(Star):
                         pass
 
                     # 组装消息内容
-                    forward_message = f"检测到关键字 \n{keyword} \n来自群 {group_name} "
+                    forward_message = f"检测到关键字:{keyword} \n来自群 {group_name} "
 
                     # 转发消息
                     
