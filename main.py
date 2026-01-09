@@ -37,7 +37,7 @@ class MyPlugin(Star):
                     client = event.bot
                     # 获取群名称
                     try:
-                        group_info = await client.api.call_action('get_group_info', int(group_id))
+                        group_info = await client.api.call_action('get_group_info', group_id=int(group_id))
                         group_name = group_info.get('group_name', group_name)
                     except Exception as e:
                         logger.error(f"获取群名称失败，使用群号作为名称{e}")
