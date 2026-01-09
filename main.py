@@ -46,7 +46,7 @@ class MyPlugin(Star):
                         pass
 
                     # 组装消息内容
-                    forward_message = f"【关键字检测通知】\n群聊：{group_name}({group_id})\n发送者：{event.get_sender_name()}({event.get_sender_id()})\n时间：{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n--------------------\n{event.get_sender_name()}：{message_str}"
+                    forward_message = f"【关键字检测通知】\n群聊：{group_name}({group_id})\n发送者：{event.get_sender_name()}({event.get_sender_id()})\n关键字：{keyword}\n时间：{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n--------------------\n{event.get_sender_name()}：{message_str}"
 
                     # 转发消息
                     
@@ -83,7 +83,7 @@ class MyPlugin(Star):
                         pass
 
                     # 组装消息内容
-                    forward_message = f"【模糊关键字提醒】\n群聊：{group_name}({group_id})\n发送者：{event.get_sender_name()}({event.get_sender_id()})\n时间：{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n--------------------\n{event.get_sender_name()}：{message_str}"
+                    forward_message = f"【模糊关键字提醒】\n群聊：{group_name}({group_id})\n发送者：{event.get_sender_name()}({event.get_sender_id()})\n关键字：{fuzzy_keyword}\n时间：{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n--------------------\n{event.get_sender_name()}：{message_str}"
 
                     # 转发消息
                     
