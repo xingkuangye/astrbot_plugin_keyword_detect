@@ -36,7 +36,9 @@ class MyPlugin(Star):
                     group_name = str(group_id)
                     # 获取群名称
                     try:
+                        logger.debug(f"开始获取群名称，群号: {group_id}")
                         group_info = await client.api.call_action('get_group_info', int(group_id))
+                        logger.debug(f"获取群信息成功: {group_info}")
                         group_name = group_info.get('group_name', group_name)
                         logger.debug(f"获取群名称成功: {group_name}")
                     except:
@@ -44,7 +46,7 @@ class MyPlugin(Star):
                         pass
 
                     # 组装消息内容
-                    forward_message = f"检测到关键字 '{keyword}' 来自群 {group_name} "
+                    forward_message = f"检测到关键字 \n{keyword} \n来自群 {group_name} "
 
                     # 转发消息
                     client = event.bot
