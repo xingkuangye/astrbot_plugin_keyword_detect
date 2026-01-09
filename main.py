@@ -22,11 +22,10 @@ class MyPlugin(Star):
             if keyword == message_str:
 
                 logger.info(f"检测到关键字 '{keyword}'，开始转发消息")
-
+                group_name = str(event.group_id)
                 # 获取群名称
                 try:
                     group_info = await client.api.call_action('get_group_info', group_id=int(event.group_id))
-                    group_name = str(event.group_id)
                     group_name = group_info.get('group_name', group_name)
                 except:
                     pass
