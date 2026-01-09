@@ -1,5 +1,5 @@
 {
-  "target_group": {
+  "target_groups": {
     "description": "Target group ID to forward messages to",
     "type": "list"
   },
