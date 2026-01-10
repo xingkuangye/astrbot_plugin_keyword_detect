@@ -16,7 +16,7 @@ def get_value(obj, key, default=None):
         return default
     
 
-@register("keyword_detect", "星星旁の旷野", "识别指定关键字并将消息转发至指定群聊", "1.1.0")
+@register("keyword_detect", "星星旁の旷野", "识别指定关键字并将消息转发至指定群聊", "1.1.1")
 class MyPlugin(Star):
     
     def __init__(self, context: Context, config: dict = None):
