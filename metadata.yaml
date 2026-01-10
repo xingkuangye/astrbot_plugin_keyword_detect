@@ -1,6 +1,6 @@
 name: astrbot_plugin_keyword_detect
 display_name: 关键字检测
 desc: 识别指定关键字并将消息转发至指定群聊
-version: v1.0.0
+version: v1.1.0
 author: 星星旁の旷野
 repo: https://github.com/xingkuangye/astrbot_plugin_keyword_detect

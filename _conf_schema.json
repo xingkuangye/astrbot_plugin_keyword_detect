@@ -1,18 +1,22 @@
 {
   "detect_groups": {
-    "description": "Group IDs to monitor for keyword detection",
+    "description": "要监控的群号",
     "type": "list"
   },
   "target_groups": {
-    "description": "Target group IDs to forward messages to",
+    "description": "目标群组ID列表，用于转发消息",
     "type": "list"
   },
   "keywords": {
-    "description": "Keywords to detect (comma-separated)",
+    "description": "要检测的关键字",
     "type": "list"
   },
   "fuzzy_keywords": {
-    "description": "Fuzzy keywords to detect (comma-separated)",
+    "description": "模糊关键字",
+    "type": "list"
+  },
+  "white_keywords": {
+    "description": "白名单关键字",
     "type": "list"
   }
 }
