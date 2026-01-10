@@ -85,7 +85,7 @@ class MyPlugin(Star):
 
                 # 命中白名单关键字，不进行后续处理
                 for white_keyword in self.white_keywords:
-                    if white_keyword == message_str:
+                    if white_keyword in message_str:
                         logger.info(f"检测到白名单关键字 '{white_keyword}'，不进行转发")
                         return  
                     
