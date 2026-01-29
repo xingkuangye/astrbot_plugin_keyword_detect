@@ -60,7 +60,13 @@ class MyPlugin(Star):
                             pass
 
                         # 组装消息内容
-                        forward_message = f"【关键字检测通知】\n群聊：{group_name}({group_id})\n发送者：{event.get_sender_name()}({event.get_sender_id()})\n时间：{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n--------------------\n关键字：{keyword}\n{event.get_sender_name()}：{message_str}"
+                        forward_message = f'''【关键字检测通知】\n
+                            群聊：{group_name}({group_id})\n
+                            发送者：{event.get_sender_name()}({event.get_sender_id()})\n   
+                            时间：{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n
+                            --------------------\n
+                            关键字：{keyword}\n
+                            {event.get_sender_name()}：{message_str}'''
 
                         # 转发消息
                         
